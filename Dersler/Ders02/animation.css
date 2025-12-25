@@ -1,0 +1,83 @@
+body{
+    background-color: #d5d1d1;
+    height: 100vh; /* viewport height  yani ekran yüksekliğimin tamamını al*/
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    
+    transition-duration: 1s; /* değişim süresi */
+    transition-timing-function: ease-in-out; /* değişim hızı */
+    /* https://cssreference.io/property/transition-timing-function/ */
+    transition-property: all; /* hangi özelliklerin değişeceği ->hepsi dedim*/
+    transition: all 0.75s ease-in-out; /* kısaltılmış hali  yukarıdaki 3 satır tek satırda*/
+}
+
+.box:hover{
+    background-color: rgb(131, 131, 246);
+    width: 150px;
+    height: 150px;
+    border-radius: 25%;
+}
+
+/* Animation  */
+
+.boxAnimation{
+    width: 100px;
+    height: 100px;
+    background-color: lightseagreen;
+
+    animation-name: moveAndChange; /* animasyonun adı */
+    animation-duration: 3s; /* animasyonun süresi */
+    animation-timing-function: ease-in-out; /* hız eğrisi */
+    animation-delay: 1s; /* animasyonun başlaması için bekleme süresi */
+    animation-iteration-count: infinite; /* animasyonun kaç kez tekrarlanacağı */
+    animation-direction: alternate; /* animasyonun yönü */
+    animation-fill-mode: forwards; /* animasyon bittikten sonra son durumu korur */
+}
+
+.boxAnimation:hover{
+    animation-play-state: paused; /* animasyonun durması */
+}
+
+@keyframes moveAndChange{
+    0%{ /* animasyonun başlangıcı */
+        background-color: lightseagreen;
+        transform: translateX(0) scale(1); /* konum ve boyut */
+    }
+    50%{ /* animasyonun ortası */
+        background-color: orange;
+        transform: translateX(150px) scale(1.5); 
+    }
+    100%{ /* animasyonun sonu */
+        background-color: lightseagreen;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.boxAnimation2{
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+
+    animation: kutuAnimasyon 4s infinite alternate ease-in-out;
+}
+.boxAnimation2:hover{
+    background-color: rgb(131, 131, 246);
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
+}
+
+@keyframes kutuAnimasyon{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
