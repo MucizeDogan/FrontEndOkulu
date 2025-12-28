@@ -1,0 +1,93 @@
+*{ /* Sıfırlama işlemi*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+}
+
+p{
+    font-size: 14px;
+    margin: 10px;
+}
+
+.container{
+    width: 90%;
+    height: 700px;
+    margin: 0 auto; /* Ortalamak için */
+    background-color: cadetblue;
+    display: flex; /* Flex kutusu yapar */
+     flex-direction: row; /* Ana eksen yönü  default row*/ 
+    /* flex-direction: column; /*Ana eksen yönü column yapar*/
+    justify-content: center; /* Ana eksen hizalama  -- flex direction yönünde hizalama*/
+    align-items: center; /* flex direction tersi yönünde olan hizalama  bu hali ile en ortaya almış olduk*/ 
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    justify-content: space-evenly; /* Eşit boşluk bırakır */
+    flex-wrap: wrap; /* Satır taşmalarında alt satıra geçmesini sağlar -- direkt boxlar aşağıya geçiyor*/
+    
+    /* Justify-content değerleri: */ 
+    /* 
+    flex-start: Öğeleri flexbox container'ın sol tarafına hizalar.
+    flex-end: Öğeleri flexbox container'ın sağ tarafına hizalar.
+    center: Öğeleri flexbox container'ın ortasına hizalar.
+    space-between: Öğeler eşit aralıklarla yatay şekilde yayılır
+    space-around: Öğeler etraflarında eşit aralıklar olacak şekilde yatay şekilde yayılır 
+    */
+
+    /* align-items değerleri */
+    /* 
+    flex-start: Öğeleri flexbox container'ın tepesine hizalar
+    flex-end: Öğeleri flexbox container'ın aşağısına hizalar
+    center: Öğeleri flexbox container'ın dikey ortasına hizalar
+    baseline: Öğeleri flexbox container'ın yazı referans çizgisine(baseline) hizalar.
+    stretch: Öğeler flexbox container boyunca uzarlar
+    */
+
+    /* flex-direction değerleri  
+    row: Öğeleri yatay olarak sıralar (default)
+    row-reverse: Öğeleri yatay olarak ters sıralar
+    column: Öğeleri dikey olarak sıralar
+    column-reverse: Öğeleri dikey olarak ters sıralar
+    */
+
+    /* NOTLAR */
+    /* Ana eksen (main axis) flex-direction ile belirlenir */
+    /* Çapraz eksen (cross axis) ana eksenin ters yönüdür */
+    /* flex direction kuralı column değerini aldığında, justify-content kuralı dikeyde ve align-items kuralı yatayda çalışır, unutmayın. */
+
+    /* align-content değerleri:  Birden fazla satır varsa satırlar arasındaki boşlukları belirler */
+    /* flex-start: Satırlar flex container'ın tepesinde toplanır.
+    flex-end: Satırlar flex container'ın aşağısında toplanır.
+    center: Satırlar flex container'ın dikey ortasında toplanır.
+    space-between: Satırlar aralarında eşit boşluk kalacak şekilde yayılırlar.
+    space-around: Satırlar etraflarında eşit boşluk kalacak şekilde yayılırlar.
+    stretch: Satırlar flex container'ı kaplamak için uzarlar.
+    
+    align-content satırlar için aralıkları belirlerken, align-items öğelerin flex container içerisinde beraberce nasıl
+    hizalanacağını belirler. Eğer tek satır varsa, align-content kuralının bir etkisi yoktur. */
+}
+
+.box{
+    width: 250px;
+    height: 250px;
+    background-color: coral;
+    
+}
+
+
+
+@media screen and (max-width:768px){ /* Ekran genişliği 768px den küçük ise  ekran mobilse sırası farklı olsun gibi küçük bir örnek*/
+.box1{
+    order: 3; /* Sıralamayı değiştirir */
+}
+.box2{
+    order: 2;
+}
+.box3{
+    order: 1;
+}
+    
+}

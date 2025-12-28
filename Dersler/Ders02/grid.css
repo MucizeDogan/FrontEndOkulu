@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 600px;
+    background-color: lightgray;
+    padding: 20px;
+    display: grid; /* grid container yapıyoruz -- alanın tamamını kapladı*/ 
+    gap: 10px; /* grid alanları arasındaki boşluk */
+    /*justify-content: center; /* yatayda ortala */
+    /*align-items: center; /* dikeyde ortala */
+    /* columns da kolonların genişliğini, rows da satırların yüksekliğini belirliyoruz.*/
+    grid-template-columns: repeat(3, 150px); /* 3 sütun oluşturduk her biri 150px genişliğinde */
+    grid-template-columns: auto auto auto; /* 3 sütun oluşturduk her biri içeriğe göre genişlik alır */
+    grid-template-columns: 150px auto auto 100px; /* 4 sütun oluşturduk, ilk sütun 150px, son sütun 100px, ortadakiler içeriğe göre genişlik alır */
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun oluşturduk her biri eşit genişlikte */
+    /*grid-template-rows: repeat(4, 1fr); /* 4 satır oluşturduk her biri eşit yükseklikte */
+    /*grid-template-rows: 100px 200px auto auto; /* 4 satır oluşturduk, ilk satır 100px, ikinci satır 200px, diğerleri içeriğe göre yükseklik alır */
+
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); /* ekrana sığabildiği kadar sütun oluşturur, her sütun en az 150px genişliğinde, maksimum ise eşit genişlikte */
+    
+}
+
+.item{
+    background-color: tomato;
+    padding: 20px;
+    border: 2px solid white;
+}
