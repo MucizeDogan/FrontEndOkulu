@@ -1,0 +1,12 @@
+# Node
+node_modules/
+
+# Visual Studio Code
+.vscode/
+
+# Build çıktıları
+dist/
+build/
+
+# Logs
+*.log
