@@ -1,0 +1,21 @@
+node.js kurduktan sonra terminale npm init yazarak package.json dosyasını oluşturabiliriz
+bu package.json bu klasörde benim bir node javascript uygulaması yazacağımı söyler.
+Paketler yükleyebilir, yönetebiliriz.
+
+- bizim için önemli olan "scripts" kısmı
+- Öncelikle bir bağımlılık yükleyeceğiz sass paketi yükleyeceğiz.
+- Terminalde scss klasörünün içindeyken     npm i sass     diyoruz bizim için paketleri kuruyor.
+
+paketi kullanmak için de scripts e yazacağız. Ondan önce scss klasörünün içini düzenleyeceğiz. İçine bir tane daha scss kalsörü ekliyoruz. bir tane de css klasörü oluşturuyoruz.
+scss içine bir tane main.scss ekliyoruz.
+Amacımız şu; sass paketi arka planda çalışacak benim scss dosyamı izleyecek ve çıktılarını css dosyama atacak. Peki biz bunu nerde kullanacağız ana dizindeki scss klasörünün içine bir tane .html oluşturuyoruz.
+html de link olarak css klasörüne çıkacak olan main.css i link veriyoruz.
+<link rel="stylesheet" href="css/main.css">
+
+package.json içinde scripts içine
+"sass": "sass --watch scss:css"  diyoruz. scss oku css e yaz
+
+sonra bunu çalıştırmak için terminalde(scss dizinindeyken) 
+npm run sass
+diyoruz.
+bunu dediğimiz anda css klasörüne main.css kalsörü oluşuyor.
