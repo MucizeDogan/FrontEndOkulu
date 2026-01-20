@@ -8,7 +8,7 @@ document.getElementById("veri").addEventListener("click", function(){
     //Response da "Merhaba, ben bir datayım." ı çekmiş olduk
 })
 
-// Veri çekilirken readyState durumuna göre işlem yapılabilir.
+// Veri çekilirken readyState durumuna göre işlem yapılabilir.Yani araya girilip işlem yapılabilir.
 document.getElementById("veri").addEventListener("click", function(){
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){ //ready state değişme eventi
